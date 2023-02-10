@@ -1,0 +1,14 @@
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+.none{
+    margin-top: 2rem;
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+}

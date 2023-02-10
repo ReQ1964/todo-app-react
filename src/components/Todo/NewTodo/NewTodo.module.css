@@ -1,0 +1,39 @@
+@import '../../../vars.css';
+
+.new-todo{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    width: 100%;
+    max-width: 400px;
+}
+.new-todo p {
+    color: white;
+}
+.new-todo-modal{
+    text-align: center;
+}
+.new-todo-modal__inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+select{
+    padding: 0.2rem;
+    width: 80%;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 0.2rem;
+    font-size: 1.2rem;
+}
+form + .next{
+    position: absolute;
+    right: 32px;
+    bottom: 160px;
+    width: 40px;
+    height: 30px;
+    background-color: rgba(20, 24, 20, 0.226);
+}

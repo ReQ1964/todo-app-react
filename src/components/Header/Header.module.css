@@ -1,0 +1,22 @@
+@import '../../vars.css';
+
+.header{
+    background-color: var(--primary-color);
+    padding: 1.5rem 3rem;
+    margin-bottom: 1rem;
+}
+.header__heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+.header__heading img{
+    width: 70px;
+}
+.header__heading a{
+    text-decoration: none;
+    color: white;
+}
+
