@@ -7,7 +7,7 @@ const TodoList = () => {
   const todoCtx = useContext(TodoContext);
   const { todos, selectedDate } = todoCtx;
 
-  const filteredTodos = todos.filter((item) => `${item.date}` === selectedDate);
+  const filteredTodos = todos.filter((item) => item.date == selectedDate);
 
   return (
     <React.Fragment>

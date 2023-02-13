@@ -15,7 +15,8 @@ const NewTodo = () => {
   const tag = useRef();
   const date = useRef();
 
-  const currentMonth = dayjs().month().toString().padStart(2, "0");
+  let currentMonth = dayjs().month() + 1;
+  let curMonth = currentMonth.toString().padStart(2, "0");
 
   const todoCtx = useContext(TodoContext);
   const { onTodoAdd, onTodoEdit, todos, weekdays, tags } = todoCtx;
@@ -27,7 +28,7 @@ const NewTodo = () => {
       title: title.current.value,
       desc: desc.current.value,
       tag: tag.current.value,
-      date: dayjs().day().toString().padStart(2, "0"),
+      date: date.current.value.split("-")[2],
       id: Math.random(),
     });
     formVisibilityHandler();
@@ -67,8 +68,8 @@ const NewTodo = () => {
                   </select>
                   <Input
                     type="date"
-                    min={`2023-${currentMonth}-${weekdays[0].day}`}
-                    max={`2023-${currentMonth}-${weekdays[6].day}`}
+                    min={`2023-${curMonth}-${weekdays[0].day}`}
+                    max={`2023-${curMonth}-${weekdays[6].day}`}
                     ref={date}
                   />
                 </div>
